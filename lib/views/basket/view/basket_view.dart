@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import '../../../config/colors/colors.dart';
 import '../../../config/components/text_style.dart';
@@ -11,6 +12,12 @@ class BasketView extends StatefulWidget {
 }
 
 class _BasketViewState extends State<BasketView> {
+
+  final List<String> sliderImageList = [
+    'assets/images/bkash.png',
+    'assets/images/nagad.png',
+    'assets/images/dbbll.jpg',
+  ];
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
@@ -655,16 +662,167 @@ class _BasketViewState extends State<BasketView> {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Container(
-          height: 50,
-          width: size.width,
-          decoration: const BoxDecoration(
-            color: Colors.blue,
-          ),
-          child: Center(
-            child: Text(
-              'Checkout',
-              style: textStyle(color: Colors.white, fontWeight: FontWeight.bold,fontSize: 18),
+        child: InkWell(
+          onTap: () {
+            showModalBottomSheet(
+
+              isScrollControlled: true,
+              backgroundColor: Colors.white,
+              shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(30),
+                      topLeft: Radius.circular(30))),
+              context: context,
+              builder: (context) {
+                return SizedBox(
+                  height: 475,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const SizedBox(height: 20,),
+                        Container(
+                          height: 5,
+                          width: 40,
+                          decoration: const BoxDecoration(
+                            color: Colors.grey,
+
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Payment',
+                              style: textStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            ),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.add,
+                                      color: Colors.blue,
+                                      size: 14,
+                                    ),
+                                    Text(
+                                      'Add New Card',
+                                      style: textStyle(
+                                          color: Colors.blue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 14),
+                                    )
+                                  ],
+                                ))
+                          ],
+                        ),
+                        const SizedBox(height: 6,),
+                        //carousel section start
+                        CarouselSlider(
+                          options: CarouselOptions(
+                              enlargeCenterPage: true,
+                              enableInfiniteScroll: true,
+                              scrollDirection: Axis.horizontal,
+                              autoPlay: true,
+                              reverse: false,
+                              height: 190),
+                          items: sliderImageList
+                              .map((e) => ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.asset(
+                              e,
+                              height: 390,
+                              width: 300,
+                              fit: BoxFit.fill,
+                            ),
+                          ))
+                              .toList(),
+                        ),
+                        //carousel section end
+                        const SizedBox(height: 8,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Total',style: textStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: [
+                           Text('Items total',style: textStyle(color: Colors.grey),),
+                           Text('\$11.30',style: textStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                         ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Taxes',style: textStyle(color: Colors.grey),),
+                            Text('\$2.39',style: textStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Delivery Fee',style: textStyle(color: Colors.grey),),
+                            Text('\$1.00',style: textStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                          ],
+                        ),
+                        const Divider(),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Order Total',style: textStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+                            Text('\$14.69',style: textStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                          ],
+                        ),
+                        const SizedBox(height: 12,),
+                        Container(
+                          height: 50,
+                          width: size.width,
+                          decoration: const BoxDecoration(color: Colors.blue),
+                          child: Container(
+                            alignment: Alignment.center,
+                              decoration: const BoxDecoration(color: Colors.blue),
+                              height: 50,
+                              width: size.width,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                child: Text(
+                                  'Pay Now',
+                                  style: textStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16),
+                                ),
+                              )
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            );
+          },
+          child: Container(
+            height: 50,
+            width: size.width,
+            decoration: const BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Center(
+              child: Text(
+                'Checkout',
+                style: textStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18),
+              ),
             ),
           ),
         ),
