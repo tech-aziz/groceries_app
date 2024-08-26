@@ -306,8 +306,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -415,8 +414,7 @@ class _BrandViewState extends State<BrandView> {
                               Positioned(
                                 top: 30,
                                 child: Container(
-                                  height: 23,
-                                  width: 65,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: const BoxDecoration(
                                       color: Colors.orangeAccent,
                                       borderRadius: BorderRadius.only(
@@ -580,8 +578,7 @@ class _BrandViewState extends State<BrandView> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Container(
-                                        height: 30,
-                                        width: 30,
+                                        padding: const EdgeInsets.all(2),
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(100),
@@ -605,8 +602,7 @@ class _BrandViewState extends State<BrandView> {
                                         width: 6,
                                       ),
                                       Container(
-                                        height: 30,
-                                        width: 30,
+                                        padding: const EdgeInsets.all(2),
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(100),
@@ -739,8 +735,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -993,8 +988,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -1123,8 +1117,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -1258,8 +1251,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -1368,8 +1360,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -1480,8 +1471,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -1590,8 +1580,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -1705,8 +1694,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -1815,8 +1803,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -1930,8 +1917,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -2040,8 +2026,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -2155,8 +2140,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),
@@ -2265,8 +2249,7 @@ class _BrandViewState extends State<BrandView> {
                                 right: 20,
                                 bottom: 10,
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       color: Colors.blue),

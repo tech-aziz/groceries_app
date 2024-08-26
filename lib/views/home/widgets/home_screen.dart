@@ -305,10 +305,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                        crossAxisSpacing: 8,
-                        mainAxisSpacing: 8),
+                            crossAxisSpacing: 8,
+                            mainAxisSpacing: 8),
                     itemBuilder: (context, index) {
                       return customTopOffersItem(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const BrandView(),
+                            ));
+                          },
                           companyImg: 'assets/images/somerfield.jpg',
                           companyName: 'Somerfield',
                           offer: '30% ',
