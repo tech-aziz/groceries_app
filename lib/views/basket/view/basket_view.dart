@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../config/colors/colors.dart';
 import '../../../config/components/text_style.dart';
 import '../../widgets/custom_appbar.dart';
+import '../orders/view/orders_view.dart';
 
 class BasketView extends StatefulWidget {
   const BasketView({super.key});
@@ -809,19 +810,24 @@ class _BasketViewState extends State<BasketView> {
               },
             );
           },
-          child: Container(
-            height: 50,
-            width: size.width,
-            decoration: const BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Center(
-              child: Text(
-                'Checkout',
-                style: textStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18),
+          child: InkWell(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OrdersView(),));
+            },
+            child: Container(
+              height: 50,
+              width: size.width,
+              decoration: const BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Center(
+                child: Text(
+                  'Checkout',
+                  style: textStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                ),
               ),
             ),
           ),
